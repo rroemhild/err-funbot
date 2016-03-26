@@ -1,0 +1,9 @@
+[Core]
+Name = FunBot
+Module = funbot
+
+[Documentation]
+Description = Have fun with your Errbot.
+
+[Python]
+Version = 2+
