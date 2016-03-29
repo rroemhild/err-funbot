@@ -9,7 +9,7 @@ class FunBot(BotPlugin):
     """
 
     @botcmd(split_args_with=None)
-    def random(self, msg, args):
+    def random(self, mess, args):
         """get a random number between min and max
 
         If only one arg is given it is assumed to be max and min is set to 1.
@@ -29,8 +29,8 @@ class FunBot(BotPlugin):
         except ValueError:
             return u'I can only handle numbers.'
 
-        if msg.type == 'groupchat':
-            return u'{0} rolls {1} ({2} - {3})'.format(msg.nick, randint, min,
+        if mess.type == 'groupchat':
+            return u'{0} rolls {1} ({2} - {3})'.format(mess.nick, randint, min,
                                                        max)
         else:
             return u'{0} ({1} - {2})'.format(randint, min, max)
