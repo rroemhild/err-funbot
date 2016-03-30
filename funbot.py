@@ -36,7 +36,7 @@ class FunBot(BotPlugin):
         except ValueError:
             return u'I can only handle numbers.'
 
-        if mess.type == 'groupchat':
+        if mess.is_group:
             return u'{0} rolls {1} ({2} - {3})'.format(mess.nick, randint, min,
                                                        max)
         else:
@@ -46,7 +46,7 @@ class FunBot(BotPlugin):
     def slap(self, mess, args):
         """Smack people with enormous iron bars and scary cellos."""
 
-        if mess.type != 'groupchat':
+        if mess.is_group is not True:
             return 'Works only in chat rooms.'
 
         if len(args) == 0:
