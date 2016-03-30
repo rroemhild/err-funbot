@@ -9,4 +9,4 @@ Description = Have fun with your Errbot.
 Version = 2+
 
 [Errbot]
-Min=3.0.0
+Min=3.2.4
